@@ -8,19 +8,18 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     sanFrancisco reader;
-    fstream arquivo("./data/san_francisco_payroll_dataset.csv");
+    ifstream arquivo;
+    arquivo.open("./data/san_francisco_payroll_dataset.csv");
     fstream saida("out.bin",ios::out);
-    string linha = "";
+    char* linha = new char[100];
     
+    // o codigo foi pensado em uma tabela csv sem campos em branco
     if (arquivo)
     {
-        int cont = 10;
-        while (arquivo >> linha and cont <=10)
+        int cont = 0;
+        while (arquivo.getline(linha,100,','))
         {
-            // for (int i = 0; i < linha.length(); i++)
-            // {
             
-            // }
             cout << linha << endl;
             cont++;
         }
@@ -28,6 +27,8 @@ int main(int argc, char const *argv[])
     }
     
 
+    arquivo.close();
+    saida.close();
 
     return 0;
 }
