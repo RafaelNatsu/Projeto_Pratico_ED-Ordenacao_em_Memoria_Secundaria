@@ -1,6 +1,6 @@
 all: main
 
-main: main.o
+main: main.o classData.o
 	g++ -o main main.o classData.o
 
 main.o: main.cpp classData.hpp

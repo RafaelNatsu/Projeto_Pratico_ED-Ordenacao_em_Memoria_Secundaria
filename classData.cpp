@@ -25,14 +25,14 @@ sanFrancisco::~sanFrancisco()
     delete [] benefits;
     delete [] totalPay;
     delete [] totalPayEBenefits;
-    employeeName = nullptr;
-    jobTitle = nullptr;
-    basePay = nullptr;
-    overtimePay = nullptr;
-    otherPay = nullptr;
-    benefits = nullptr;
-    totalPay = nullptr;
-    totalPayEBenefits = nullptr;
+    // employeeName = nullptr;
+    // jobTitle = nullptr;
+    // basePay = nullptr;
+    // overtimePay = nullptr;
+    // otherPay = nullptr;
+    // benefits = nullptr;
+    // totalPay = nullptr;
+    // totalPayEBenefits = nullptr;
 }
 
 char* sanFrancisco::preenche(std::string palavra)
@@ -158,11 +158,11 @@ void sanFrancisco::setTotalPayEBenefits(std::string _totalPayEBenefits)
     totalPayEBenefits = preenche(_totalPayEBenefits);
 }
 
-short int sanFrancisco::getYear()
+int sanFrancisco::getYear()
 {
     return year;
 }
-void sanFrancisco::setYear(short int _year)
+void sanFrancisco::setYear(int _year)
 {
     year = _year;
 }

@@ -3,6 +3,7 @@
 
 #define TAM_NAME 55
 
+#include <iostream>
 class sanFrancisco
 {
     private:    
@@ -15,7 +16,7 @@ class sanFrancisco
         char* benefits;
         char* totalPay;
         char* totalPayEBenefits;
-        short int year;
+        int year;
         char* preenche(std::string palavra);
     public:
         sanFrancisco();
@@ -56,8 +57,8 @@ class sanFrancisco
         void setTotalPayEBenefits(char* _totalPayEBenefits);
         void setTotalPayEBenefits(std::string _totalPayEBenefits);
         
-        short int getYear();
-        void setYear(short int _year);
+        int getYear();
+        void setYear(int _year);
 };
 
 #endif
