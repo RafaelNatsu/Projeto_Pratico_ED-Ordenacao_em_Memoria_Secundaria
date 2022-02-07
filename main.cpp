@@ -5,10 +5,7 @@
 using namespace std;
 
 void menu(){
-  bool sair = false;
-  
-  while (sair != true){
-    
+      
     cout <<"**********MENU PRINCIPAL**********" << endl << endl;
   
     cout <<"(1)............Deseja ler/abrir um arquivo"<<endl;
@@ -22,10 +19,20 @@ void menu(){
   
     cout << "Digite o numero da opcao desejada:";
     
-    char opcao;
-    cin >> opcao;
+}
+
+
+int main(int argc, char const *argv[])
+{
     
-    
+  
+  bool sair = false;
+  
+  while (sair != true){
+      menu();
+      char opcao;
+      cin >> opcao;
+      
     switch(opcao){
      /* case"1":
       
@@ -50,20 +57,13 @@ void menu(){
       
       case '6':
       sair = true;
-      
       break;
       
-    default:
+      default:
       cout << "opcao invalida." << endl;
   }
   
 }
-}
-
-
-int main(int argc, char const *argv[])
-{
-    menu();
     
     sanFrancisco reader;
     ifstream arquivo;
