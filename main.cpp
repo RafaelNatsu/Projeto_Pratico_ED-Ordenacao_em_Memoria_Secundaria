@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "classData.hpp"
+#include "classIOFile.hpp"
 
 using namespace std;
 
