@@ -10,7 +10,7 @@ classData.o: classData.cpp classData.hpp
 	g++ -o classData.o classData.cpp -c -W -Wall -ansi -pedantic
 
 classIOFile.o: classIOFile.cpp classIOFile.hpp
-	g++ -o classIOFile.cpp classIOFile.hpp -c -W -Wall -ansi -pedantic
+	g++ -o classIOFile.o classIOFile.cpp -c -W -Wall -ansi -pedantic
 
 clean:
-	rm -rf *.o *.exe main
+	rm -rf *.o *.exe main out.bin

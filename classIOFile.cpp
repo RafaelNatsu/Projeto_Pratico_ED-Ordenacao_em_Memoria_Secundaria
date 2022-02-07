@@ -3,7 +3,7 @@
 #include "classData.hpp"
 #include "classIOFile.hpp"
 
-classIOFile::classIOFile(std::string _path)
+classIOFile::classIOFile(char* _path)
 {
     file.open(_path, std::fstream::binary | std::fstream::out | std::fstream::in);
     if(!file)
@@ -15,7 +15,7 @@ classIOFile::~classIOFile()
     file.close();
 }
 
-void swap(sanFrancisco &_de , sanFrancisco &_para)
+void classIOFile::swap(sanFrancisco &_de , sanFrancisco &_para)
 {
     sanFrancisco aux;
     aux = _de;

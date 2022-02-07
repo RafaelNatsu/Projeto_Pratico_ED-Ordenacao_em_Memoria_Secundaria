@@ -10,7 +10,7 @@ class classIOFile
 private:
     std::fstream file;    
 public:
-    classIOFile(std::string _path);
+    classIOFile(char* _path);
     ~classIOFile();
     void swap(sanFrancisco &_de , sanFrancisco &_para);
     void adicionaElementoPosi(int _posi, sanFrancisco &_data);
