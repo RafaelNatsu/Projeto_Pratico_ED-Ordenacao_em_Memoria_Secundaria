@@ -75,7 +75,7 @@ char* sanFrancisco::getEmployeeName()
 {
     return employeeName;
 }
-void sanFrancisco::setEmployeeName(char* &_employeeName)
+void sanFrancisco::setEmployeeName(char* _employeeName)
 {
     employeeName = _employeeName;
 }
@@ -92,7 +92,7 @@ char* sanFrancisco::getJobTitle()
 {
     return jobTitle;
 }
-void sanFrancisco::setJobTitle(char* &_jobTitle)
+void sanFrancisco::setJobTitle(char* _jobTitle)
 {
     jobTitle = _jobTitle;
 }
@@ -109,7 +109,7 @@ char* sanFrancisco::getBasePay()
 {
     return basePay;
 }
-void sanFrancisco::setBasePay(char* &_basePay)
+void sanFrancisco::setBasePay(char* _basePay)
 {
     basePay = _basePay;
 }
@@ -126,7 +126,7 @@ char* sanFrancisco::getOvertimePay()
 {
     return overtimePay;
 }
-void sanFrancisco::setOvertimePay(char* &_overtimePay)
+void sanFrancisco::setOvertimePay(char* _overtimePay)
 {
     overtimePay = _overtimePay;
 }
@@ -143,7 +143,7 @@ char* sanFrancisco::getOtherPay()
 {
     return otherPay;
 }
-void sanFrancisco::setOtherPay(char* &_otherPay)
+void sanFrancisco::setOtherPay(char* _otherPay)
 {
     otherPay = _otherPay;
 }
@@ -160,7 +160,7 @@ char* sanFrancisco::getBenefits()
 {
     return benefits;
 }
-void sanFrancisco::setBenefits(char* &_benefits)
+void sanFrancisco::setBenefits(char* _benefits)
 {
     benefits = _benefits;
 }
@@ -177,7 +177,7 @@ char* sanFrancisco::getTotalPay()
 {
     return totalPay;
 }
-void sanFrancisco::setTotalPay(char* &_totalPay)
+void sanFrancisco::setTotalPay(char* _totalPay)
 {
     totalPay = _totalPay;
 }
@@ -194,7 +194,7 @@ char* sanFrancisco::getTotalPayEBenefits()
 {
     return totalPayEBenefits;
 }
-void sanFrancisco::setTotalPayEBenefits(char* &_totalPayEBenefits)
+void sanFrancisco::setTotalPayEBenefits(char* _totalPayEBenefits)
 {
     totalPayEBenefits = _totalPayEBenefits;
 }
