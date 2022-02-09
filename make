@@ -4,13 +4,13 @@ main: main.o classData.o classIOFile.o
 	g++ -o main main.o classData.o classIOFile.o
 
 main.o: main.cpp classData.hpp classIOFile.hpp
-	g++ -std=c++11 -c -W -Wall -ansi -pedantic -o main.o main.cpp 
+	g++ -std=c++14 -o main.o main.cpp -c -W -Wall -ansi -pedantic
 
 classData.o: classData.cpp classData.hpp
-	g++ -std=c++11 -c -W -Wall -ansi -pedantic -o classData.o classData.cpp 
+	g++ -o classData.o classData.cpp -c -W -Wall -ansi -pedantic
 
 classIOFile.o: classIOFile.cpp classIOFile.hpp
-	g++ -std=c++11 -c -W -Wall -ansi -pedantic -o classIOFile.o classIOFile.cpp 
+	g++ -o classIOFile.o classIOFile.cpp -c -W -Wall -ansi -pedantic
 
 clean:
 	rm -rf *.o *.exe main out.bin

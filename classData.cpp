@@ -62,13 +62,10 @@ int sanFrancisco::getId()
 {
     return id;
 }
-void sanFrancisco::setId(int &_id)
+
+void sanFrancisco::setId(int _id)
 {
     id = _id;
-}
-void sanFrancisco::setId(sanFrancisco &_obj)
-{
-    id = _obj.id;
 }
 
 char* sanFrancisco::getEmployeeName()
@@ -77,15 +74,16 @@ char* sanFrancisco::getEmployeeName()
 }
 void sanFrancisco::setEmployeeName(char* _employeeName)
 {
-    employeeName = _employeeName;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _employeeName[i];
+    }
+    employeeName = aux;
 }
-void sanFrancisco::setEmployeeName(std::string &_employeeName)
+void sanFrancisco::setEmployeeName(std::string _employeeName)
 {
     employeeName = preenche(_employeeName);
-}
-void sanFrancisco::setEmployeeName(sanFrancisco &_obj)
-{
-    employeeName = _obj.employeeName;
 }
 
 char* sanFrancisco::getJobTitle()
@@ -94,15 +92,16 @@ char* sanFrancisco::getJobTitle()
 }
 void sanFrancisco::setJobTitle(char* _jobTitle)
 {
-    jobTitle = _jobTitle;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _jobTitle[i];
+    }
+    jobTitle = aux;
 }
-void sanFrancisco::setJobTitle(std::string &_jobTitle)
+void sanFrancisco::setJobTitle(std::string _jobTitle)
 {
     jobTitle = preenche(_jobTitle);
-}
-void sanFrancisco::setJobTitle(sanFrancisco &_obj)
-{
-    jobTitle = _obj.jobTitle;
 }
 
 char* sanFrancisco::getBasePay()
@@ -111,15 +110,16 @@ char* sanFrancisco::getBasePay()
 }
 void sanFrancisco::setBasePay(char* _basePay)
 {
-    basePay = _basePay;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _basePay[i];
+    }
+    basePay = aux;
 }
-void sanFrancisco::setBasePay(std::string &_basePay)
+void sanFrancisco::setBasePay(std::string _basePay)
 {
     basePay = preenche(_basePay);
-}
-void sanFrancisco::setBasePay(sanFrancisco &_obj)
-{
-    basePay = _obj.basePay;
 }
 
 char* sanFrancisco::getOvertimePay()
@@ -128,32 +128,34 @@ char* sanFrancisco::getOvertimePay()
 }
 void sanFrancisco::setOvertimePay(char* _overtimePay)
 {
-    overtimePay = _overtimePay;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _overtimePay[i];
+    }
+    overtimePay = aux;
 }
-void sanFrancisco::setOvertimePay(std::string &_overtimePay)
+void sanFrancisco::setOvertimePay(std::string _overtimePay)
 {
     overtimePay = preenche(_overtimePay);
 }
-void sanFrancisco::setOvertimePay(sanFrancisco &_obj)
-{
-    overtimePay = _obj.overtimePay;
-}
-
 char* sanFrancisco::getOtherPay()
 {
     return otherPay;
 }
 void sanFrancisco::setOtherPay(char* _otherPay)
 {
-    otherPay = _otherPay;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _otherPay[i];
+    }
+
+    otherPay = aux;
 }
-void sanFrancisco::setOtherPay(std::string &_otherPay)
+void sanFrancisco::setOtherPay(std::string _otherPay)
 {
     otherPay = preenche(_otherPay);
-}
-void sanFrancisco::setOtherPay(sanFrancisco &_obj)
-{
-    otherPay = _obj.otherPay;
 }
 
 char* sanFrancisco::getBenefits()
@@ -162,15 +164,17 @@ char* sanFrancisco::getBenefits()
 }
 void sanFrancisco::setBenefits(char* _benefits)
 {
-    benefits = _benefits;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _benefits[i];
+    }
+
+    benefits = aux;
 }
-void sanFrancisco::setBenefits(std::string &_benefits)
+void sanFrancisco::setBenefits(std::string _benefits)
 {
     benefits = preenche(_benefits);
-}
-void sanFrancisco::setBenefits(sanFrancisco &_obj)
-{
-    benefits = _obj.benefits;
 }
 
 char* sanFrancisco::getTotalPay()
@@ -179,15 +183,17 @@ char* sanFrancisco::getTotalPay()
 }
 void sanFrancisco::setTotalPay(char* _totalPay)
 {
-    totalPay = _totalPay;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _totalPay[i];
+    }
+
+    totalPay = aux;
 }
-void sanFrancisco::setTotalPay(std::string &_totalPay)
+void sanFrancisco::setTotalPay(std::string _totalPay)
 {
     totalPay = preenche(_totalPay);
-}
-void sanFrancisco::setTotalPay(sanFrancisco &_obj)
-{
-    totalPay = _obj.totalPay;
 }
 
 char* sanFrancisco::getTotalPayEBenefits()
@@ -196,26 +202,24 @@ char* sanFrancisco::getTotalPayEBenefits()
 }
 void sanFrancisco::setTotalPayEBenefits(char* _totalPayEBenefits)
 {
-    totalPayEBenefits = _totalPayEBenefits;
+    char *aux = new char[TAM_NAME];
+    for (int i = 0; i < TAM_NAME; i++)
+    {
+        aux[i] = _totalPayEBenefits[i];
+    }
+    
+    totalPayEBenefits = aux;
 }
-void sanFrancisco::setTotalPayEBenefits(std::string &_totalPayEBenefits)
+void sanFrancisco::setTotalPayEBenefits(std::string _totalPayEBenefits)
 {
     totalPayEBenefits = preenche(_totalPayEBenefits);
-}
-void sanFrancisco::setTotalPayEBenefits(sanFrancisco &_obj)
-{
-    totalPayEBenefits = _obj.totalPayEBenefits;
 }
 
 int sanFrancisco::getYear()
 {
     return year;
 }
-void sanFrancisco::setYear(int &_year)
+void sanFrancisco::setYear(int _year)
 {
     year = _year;
-}
-void sanFrancisco::setYear(sanFrancisco &_obj)
-{
-    year = _obj.year;
 }
